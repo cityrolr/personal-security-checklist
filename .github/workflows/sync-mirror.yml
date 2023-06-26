@@ -1,10 +1,10 @@
 # Pushes the contents of the repo to the Codeberg mirror
-name: 🪞 Mirror to Codeberg
-on:
+#name: 🪞 Mirror to Codeberg
+#on:
   push:
     branches: [ 'master' ]
   workflow_dispatch:
-jobs:
+#jobs:
   codeberg:
     runs-on: ubuntu-latest
     steps:
@@ -14,4 +14,3 @@ jobs:
         with:
           target_repo_url: git@codeberg.org:alicia/personal-security-checklist.git
           ssh_private_key: ${{ secrets.CODEBERG_SSH }}
- 
